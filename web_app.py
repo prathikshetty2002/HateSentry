@@ -27,9 +27,9 @@ import plotly.express as px
 load_dotenv()
 
 print(os.getenv("HUGGINGFACE_API"))
-
+print(st.secrets["HUGGINGFACE_API"])
 API_URL_HATE = "https://api-inference.huggingface.co/models/IMSyPP/hate_speech_en"
-headers = {"Authorization": "Bearer " +  os.getenv('HUGGINGFACE_API') }
+headers = {"Authorization": "Bearer " +  st.secrets["HUGGINGFACE_API"] }
 
 def query_hate(payload):
 	response = requests.post(API_URL_HATE, headers=headers, json=payload)

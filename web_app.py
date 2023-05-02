@@ -11,6 +11,7 @@ from flask import request
 import re
 import string
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer 
 from sklearn.feature_extraction.text import CountVectorizer

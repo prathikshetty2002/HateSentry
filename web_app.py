@@ -189,7 +189,7 @@ with sentiment_analysis:
 
 with hate_speech:
     st.header('Classification of comments')
-    sentence = st.text_input('Enter social media comment', max_chars=280) 
+    sentence = st.text_input('Enter social media comment','war in ukraine', max_chars=280) 
     def hate_en():
         print(sentence)
         output=query_hate({

@@ -225,18 +225,18 @@ with hate_speech:
             return result
         else:
             pass
-    if sentence:
-        hatespeech=hate_en()
-        print(hatespeech)
    
-        # create a list of labels and values
-        labels = list(hatespeech.keys())
-        values = list(hatespeech.values())
+    hatespeech=hate_en() 
+    print(hatespeech)
 
-        fig = px.pie(values=values, names=labels)
+	# create a list of labels and values
+    labels = list(hatespeech.keys())
+    values = list(hatespeech.values())
 
-        # display the pie chart using st.plotly_chart
-        st.plotly_chart(fig)
+    fig = px.pie(values=values, names=labels)
+
+	# display the pie chart using st.plotly_chart
+    st.plotly_chart(fig)
 
 with contact:
     st.markdown("---")
